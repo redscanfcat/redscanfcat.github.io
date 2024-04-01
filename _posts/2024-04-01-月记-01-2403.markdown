@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "月记-01-2403"
+date:   2024-04-1 16:11:21 +0800
+categories: jekyll update
+---
+
+3 月 13 号捡起 CS61A 从 Midterm1 之后的 Recursion 开始学，版本从 2022 Spring 换成最新的 2024 Spring，昨天做完 Midterm2，跟上了官方进度。4 月的计划是 CS61A 跟着官网的进度来，同时开坑 CS61B，看我学学学学学。
