@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "CS61B Lab1 配环境时遇到的问题（2024 Spring）"
+date:   2024-04-3 17:00:21 +0800
+categories: jekyll update
+---
+
+在跟着 [CS61B Lab1](https://sp24.datastructur.es/labs/lab01/#github-and-beacon-accounts) 配环境的时候，遇到的问题。
+
+#### **关于 Becoan 和 Ed**
+需要是校内学生才能使用，所以跳过就好了。
+
+#### **关于 Git 克隆仓库**
+同样的跳过克隆这个仓库：
+
+    $ git clone https://github.com/Berkeley-CS61B-Student/sp24-s**.git
+    $ cd sp24-s***
+
+改为在 github 上创建一个自己的私有仓库，然后：
+
+    $ git clone 【仓库的 https 连接】
+    $ cd 【仓库名】
+
+
+#### **使用 Git 克隆仓库时提示 failed to connect to github 443 windows**
+解决方法在[这个贴子](https://stackoverflow.com/questions/18356502/github-failed-to-connect-to-github-443-windows-failed-to-connect-to-github)。
+对我有用的是先设置 proxy address 再取消。重启电脑也有效。
+
+    $ git config --global http.proxy 127.0.0.1:8087
+    $ git config --global --unset http.proxy
+
+
+#### **intellij 里无法运行程序**
+每次只打开一个 hw/lab/proj 文件（而不是整个仓库文件）。（其实文档里很清楚地说了，但是我... :(
+
+#### **intellij 主题推荐**
+糖果色的 [Xcode-Dark-Theme](https://plugins.jetbrains.com/plugin/13106-xcode-dark-theme)，很好的主题令写代码时心情++
