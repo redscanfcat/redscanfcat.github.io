@@ -2,7 +2,7 @@
 layout: post
 title:  "CS61B Lab1 配环境时遇到的问题（2024 Spring）"
 date:   2024-04-3 17:00:21 +0800
-categories: jekyll update
+categories: cs61b
 ---
 
 在跟着 [CS61B Lab1](https://sp24.datastructur.es/labs/lab01/#github-and-beacon-accounts) 配环境的时候，遇到的问题。

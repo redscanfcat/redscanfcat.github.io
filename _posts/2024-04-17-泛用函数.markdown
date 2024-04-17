@@ -1,0 +1,25 @@
+---
+layout: post
+title:  "java 中遇到报错： Required type: capture of ?  Provided: T"
+date:   2024-04-15 11:54:30 +0800
+categories: cs61b
+---
+
+定义了 contains 函数，如果一个链表包含 x，那么返回 true，否则返回 false.
+
+    /** Returns true if this linkedList contains item x. */
+    private boolean contains(T x) {
+        for (int i = 0; i < this.size(); i++) {
+            if (this.get(i) == x) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+在调用 contains 时，Intellij 会提示 Required type: capture of ? Provided: T 
+
+    /* o 的类型是 LinkedListDeque61B<?> */
+    if (!o.contains(x)) { return false; }
+
+解决办法是使用 [Generic methods](https://docs.oracle.com/javase/tutorial/extra/generics/methods.html)。将 `private boolean contains(T x)` 改为 `private <T> boolean contains(T x)`。
