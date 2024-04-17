@@ -17,9 +17,11 @@ categories: cs61b
         return false;
     }
 
-在调用 contains 时，Intellij 会提示 Required type: capture of ? Provided: T 
+在调用 contains 时，IDE 会提示 Required type: capture of ? Provided: T 
 
     /* o 的类型是 LinkedListDeque61B<?> */
     if (!o.contains(x)) { return false; }
 
 解决办法是使用 [Generic methods](https://docs.oracle.com/javase/tutorial/extra/generics/methods.html)。将 `private boolean contains(T x)` 改为 `private <T> boolean contains(T x)`。
+
+在调用 contains 方法时，这个错误是 Java 中的类型推断机制导致的。为了解决这个问题，方法包含泛型参数 <T>，这样编译器就可以正确地推断类型。
